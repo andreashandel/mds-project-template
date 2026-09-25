@@ -45,10 +45,10 @@ log easier for AI tools to update and easier for human users to read when needed
 ## Log Entries
 
 No entries yet. In a project created from this template, AI tools add entries
-here once the repository has been renamed, following the format shown below.
+here once the repository has been renamed, following the format shown below. Follow the example structure below.
 
 
-## Example Entries
+## Example Entry
 
 ### YYYY-MM-DD — Short description
 

@@ -184,11 +184,7 @@ record a short summary in `ai/ai-use-log.md`. Logging is enabled by default once
 the repository has been renamed from `mds-project-template`, and stays enabled
 unless the project owner explicitly asks to turn it off. Work on the template
 itself is not logged. Use short text sections rather than table rows. The log
-should capture what AI helped with, which files were changed or reviewed, and
-what human checks were performed. AI-use expectations are summarized in
-`ai/ai-use-policy.md` and apply uniformly to projects created from this template.
-Do not store full chat transcripts unless the project owner explicitly wants that
-and privacy has been checked.
+should capture the date, the name of the AI, what AI helped with, which files were changed or reviewed, and what human checks were performed. AI-use expectations are summarized in `ai/ai-use-policy.md` and apply uniformly to projects created from this template. Do not store full chat transcripts unless the project owner explicitly wants that and privacy has been checked.
 
 ## Review Expectations
 
