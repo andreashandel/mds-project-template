@@ -2,6 +2,11 @@
 title: "Example Manuscript Template for a Data Analysis Project"
 author: ""
 format:
+  html:
+    embed-resources: true
+    toc: false
+    number-sections: true
+    highlight-style: github
   docx:
     toc: false
     number-sections: true
@@ -12,7 +17,11 @@ csl: ../../assets/american-journal-of-epidemiology.csl
 
 The structure below is one possible setup for a manuscript stemming from a data analysis project. It loosely follows the structure of a standard scientific manuscript. Adjust as needed. You don't need to have exactly these sections, but the content covering those sections should be addressed.
 
-This uses [MS Word as output format](https://quarto.org/docs/output-formats/ms-word.html). See [the Quarto documentation](https://quarto.org/) for instructions on how to use other formats.
+This document supports self-contained HTML (the default) and MS Word output.
+From the project root, run `quarto render products/manuscript/manuscript.qmd`
+for HTML, or add `--to docx` for Word. Add `--to all` to render both formats.
+See [the Quarto documentation](https://quarto.org/docs/output-formats/)
+for more about output formats.
 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
@@ -48,7 +57,13 @@ $\dagger$ Disclaimer: The opinions expressed in this article are the
 author's own and don't reflect their employer.
 
 
-{{< pagebreak >}}
+<!--
+Optional page break for Word output: copy the example below onto its own line
+between paragraphs, outside this comment, and remove one brace from each end
+so there are two opening and two closing braces. The extra braces prevent
+Quarto from processing this commented example. Repeat where needed for Word.
+{{{< pagebreak >}}}
+-->
 
 
 
@@ -57,7 +72,6 @@ _Write a summary of your project._
 
 _It is recommended to use a structured abstract with Background/Methods/Results/Discussion sections._
 
-{{< pagebreak >}}
 
 
 # Introduction 
@@ -77,7 +91,6 @@ Examples of reproducible research projects can for instance be found in [@mckay2
 
 
 
-{{< pagebreak >}}
 
 
 # Methods 
@@ -112,7 +125,6 @@ _Write code that reads in the file and cleans it so it's ready for analysis. Sin
 _Explain anything related to your statistical analyses._
 
 
-{{< pagebreak >}}
 
 
 # Results
@@ -172,7 +184,6 @@ flextable::flextable(result_table_2) |>
 ```
 
 
-{{< pagebreak >}}
 
 
 # Discussion
@@ -195,7 +206,6 @@ These papers [@mckay2020; @mckay2020a] are good examples of papers published usi
 Note that this cited reference will show up at the end of the document, the reference formatting is determined by the CSL file specified in the YAML header. Many more style files for almost any journal [are available](https://www.zotero.org/styles). You also specify the location of your BibTeX reference file in the YAML. You can call your reference file anything you like.
 
 
-{{< pagebreak >}}
 
 # Software and Session Information
 
@@ -209,7 +219,6 @@ a full environment manager.
 cat(paste(trimws(capture.output(sessionInfo()), which = "right"), collapse = "\n"))
 ```
 
-{{< pagebreak >}}
 
 # References
 

@@ -7,10 +7,10 @@ make presentations, posters, reports, websites, apps, or other deliverables.
 
 The example folders are:
 
-- `manuscript/`: an academic manuscript template.
+- `manuscript/`: a manuscript or analysis report template with self-contained
+  HTML output by default and optional Word output; includes a PDF supplement.
 - `presentation/`: example Quarto slides.
 - `poster/`: a placeholder for poster materials.
-- `report/`: an example HTML report.
 
 Often you need a BibTeX reference file and a CSL style file for formatting
 references. Files used across multiple products should usually go in `assets/`.

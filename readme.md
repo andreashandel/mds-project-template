@@ -116,8 +116,11 @@ This project template is set up to allow for large files, with currently the fol
 
 By default, this template commits the outputs that code generates. That includes
 the computed results, figures, and tables in `results/`, the processed data in
-`data/processed-data/`, and the rendered products such as `report.html`,
-`manuscript.docx`, `supplementary-material.pdf`, and `presentation.html`.
+`data/processed-data/`, and the rendered products such as `manuscript.html`,
+optional `manuscript.docx`, `supplementary-material.pdf`, and `presentation.html`.
+The manuscript template also serves as an analysis report, with HTML as the
+default output and Word available from the same source. See `usage.md` for
+rendering commands.
 
 The reason is convenience for readers. Someone who opens the repository can see
 the expected results and read the finished products without installing the
@@ -150,7 +153,7 @@ Adding a pattern only prevents future commits. Files that are already committed
 must also be removed from Git tracking, while keeping your local copy:
 
 ```sh
-git rm --cached products/report/report.html
+git rm --cached products/manuscript/manuscript.docx
 ```
 
 If you do stop committing generated outputs, say so in `usage.md`, so users know

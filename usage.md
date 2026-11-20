@@ -63,10 +63,20 @@ analysis scripts.
 After the results have been regenerated, render the products you need.
 
 ```sh
-quarto render products/report/report.qmd
 quarto render products/manuscript/manuscript.qmd
 quarto render products/presentation/presentation.qmd
 ```
+
+The manuscript template also serves as an analysis report. HTML is its default
+output format (`manuscript.html`). To create a Word file instead, run:
+
+```sh
+quarto render products/manuscript/manuscript.qmd --to docx
+```
+
+Use `--to all` to create both HTML and Word from the same source. The source
+includes one commented page-break example for users who want manual page breaks
+in Word output.
 
 The supplementary material renders to PDF and may require a TeX installation:
 
@@ -74,11 +84,11 @@ The supplementary material renders to PDF and may require a TeX installation:
 quarto render products/manuscript/supplement/supplementary-material.qmd
 ```
 
-The rendered products (`report.html`, `manuscript.docx`,
+The rendered products (`manuscript.html`, optional `manuscript.docx`,
 `supplementary-material.pdf`, and `presentation.html`) are committed to the
-repository by default. See the "Generated Outputs And What Gets Committed"
-section in `readme.md` for why, and for how to change that if your project
-should not track them.
+repository by default when generated. See the "Generated Outputs And What Gets
+Committed" section in `readme.md` for why, and for how to change that if your
+project should not track them.
 
 ## Review And Reproducibility Checks
 
@@ -112,7 +122,7 @@ manually:
   `NAME` and the `2026-01-01` date in the example Quarto files;
   `LINK-GOES-HERE` in `results/large-files/readme-large-files.md`; and the
   example author names, affiliations, ORCID, and
-  `corresponding-author@example.com` address in the report and manuscript.
+  `corresponding-author@example.com` address in the manuscript template.
   Replace them with project-specific information, or document why they remain.
 
 
